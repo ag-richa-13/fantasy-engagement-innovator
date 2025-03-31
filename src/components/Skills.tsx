@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BarChart3, Tools, Award } from 'lucide-react';
+import { BarChart3, Wrench, Award } from 'lucide-react';
 
 const Skills = () => {
   const technicalSkills = [
@@ -70,7 +70,7 @@ const Skills = () => {
           
           <div className="glass p-8 rounded-3xl bg-gradient-to-bl from-pm-gray/70 via-pm-gray/40 to-pm-gray/60 border border-white/10 shadow-xl shadow-pm-accent/5 animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <div className="flex items-center gap-3 mb-6">
-              <Tools size={20} className="text-pm-accent" />
+              <Wrench size={20} className="text-pm-accent" />
               <h3 className="text-xl font-bold text-gradient">Tools</h3>
             </div>
             {toolSkills.map((skill) => (

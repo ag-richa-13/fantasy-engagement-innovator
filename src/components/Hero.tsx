@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ChevronDown, Mail, Linkedin, MapPin } from 'lucide-react';
+import { ChevronDown, Mail, Linkedin, MapPin, Phone } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -24,13 +24,13 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <a 
                 href="#contact" 
-                className="px-6 py-3 rounded-full bg-pm-accent text-white font-medium hover:bg-pm-accent/90 transition-colors inline-flex items-center justify-center"
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-pm-accent to-purple-500 text-white font-medium hover:from-pm-accent/90 hover:to-purple-500/90 transition-all inline-flex items-center justify-center shadow-lg shadow-pm-accent/20"
               >
                 Contact Me
               </a>
               <a 
                 href="#experience" 
-                className="px-6 py-3 rounded-full border border-pm-accent/50 text-pm-light font-medium hover:border-pm-accent transition-colors inline-flex items-center justify-center"
+                className="px-6 py-3 rounded-full border border-pm-accent/50 bg-pm-gray/30 backdrop-blur-sm text-pm-light font-medium hover:border-pm-accent hover:bg-pm-gray/50 transition-all inline-flex items-center justify-center"
               >
                 View Experience
               </a>
@@ -57,17 +57,36 @@ const Hero = () => {
                 <MapPin size={18} /> 
                 <span className="text-sm">78-Tulsi, Shalimar, Alwar</span>
               </div>
+              <div className="flex items-center gap-2 text-pm-light/80">
+                <Phone size={18} /> 
+                <span className="text-sm">+91 9509264338</span>
+              </div>
             </div>
           </div>
           
           <div className="order-1 md:order-2 flex justify-center md:justify-end animate-fade-in">
-            <div className="relative">
-              <div className="w-[280px] h-[280px] md:w-[320px] md:h-[320px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-4 border-pm-accent/30 p-1">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-pm-accent/20 to-purple-900/20 flex items-center justify-center">
-                  <div className="text-6xl font-bold text-gradient">KK</div>
+            <div className="relative w-full max-w-md">
+              <div className="glass p-8 rounded-3xl bg-gradient-to-bl from-pm-accent/10 to-purple-900/10 border border-white/10">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-gradient mb-3">Professional Summary</h3>
+                  <p className="text-pm-light/80">
+                    Over 5 years of progressive experience in product management, specialized in fantasy sports applications with a focus on enhancing user experience.
+                  </p>
+                </div>
+                
+                <div>
+                  <h3 className="text-xl font-bold text-gradient mb-3">Core Strengths</h3>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="px-3 py-2 rounded-lg bg-pm-dark/50 border border-pm-accent/20 text-sm font-medium text-pm-light/90">Agile Methodologies</div>
+                    <div className="px-3 py-2 rounded-lg bg-pm-dark/50 border border-pm-accent/20 text-sm font-medium text-pm-light/90">UI/UX Design</div>
+                    <div className="px-3 py-2 rounded-lg bg-pm-dark/50 border border-pm-accent/20 text-sm font-medium text-pm-light/90">Product Strategy</div>
+                    <div className="px-3 py-2 rounded-lg bg-pm-dark/50 border border-pm-accent/20 text-sm font-medium text-pm-light/90">Data Analysis</div>
+                  </div>
                 </div>
               </div>
-              <div className="absolute top-0 left-0 w-full h-full rounded-full border-t-4 border-pm-accent/50 animate-pulse"></div>
+              
+              <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-br from-pm-accent to-purple-500 rounded-2xl transform rotate-12 blur-xl opacity-30"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full blur-xl opacity-20"></div>
             </div>
           </div>
         </div>
@@ -78,7 +97,7 @@ const Hero = () => {
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-pm-light/60 hover:text-pm-accent transition-colors"
       >
         <span className="text-sm mb-2">Scroll Down</span>
-        <ChevronDown className="animate-pulse" />
+        <ChevronDown className="animate-bounce" />
       </a>
     </section>
   );
